@@ -1,0 +1,45 @@
+ul li{
+	list-style-type: none;
+}
+body, html
+{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+/* CSS du header*/
+.header{
+	background-color: #6B0D0D;
+	color: white;
+}
+.nav{
+	background-color: #B82010;
+	height: 20px;
+}
+#menu li{
+	display: inline;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+#menu li a{
+	color: white;
+}
+#menu li a:hover{
+	text-decoration: none;
+	background-color: yellow;
+}
+/* CSS du footer */
+.footer{
+	background-color: #6B0D0D;
+	color: white;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	margin-top: 50px;
+	
+}
+
+.paginat li{
+	display: inline;
+	margin-right: 10px;
+}
