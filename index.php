@@ -4,6 +4,7 @@ include_once ("app/model/pdo.inc.php");
 include_once ("core/paginet.php");
 include_once ("app/config/config.inc.php");
 
+session_start();
 if (!isset($_GET["module"])) 
 {
 	$module = DEFAULT_MODULE;
