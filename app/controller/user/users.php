@@ -1,5 +1,7 @@
 <?php
 
+protection("user", 1, "user", "login");
+
 include ('app/model/users/list_users.php');
 $users = list_users();
 

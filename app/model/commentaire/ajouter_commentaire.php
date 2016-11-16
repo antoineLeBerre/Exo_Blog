@@ -1,7 +1,7 @@
 <?php 
 
 
-function ajouter_commentaire($commentaire)
+function ajouter_commentaire($commentaire, $user)
 {
 	global $pdo;
 	
@@ -12,7 +12,7 @@ function ajouter_commentaire($commentaire)
         						values
           						(:postId, :login, :contenu)");
 		$query->bindValue(":postId", $commentaire["id"], PDO::PARAM_INT);
-		$query->bindValue(":login", "2", PDO::PARAM_INT);
+		$query->bindValue(":login", $user["ID"], PDO::PARAM_INT);
 		$query->bindValue(":contenu", $commentaire["texte_commentaire"], PDO::PARAM_STR);
 		$query->execute();
 

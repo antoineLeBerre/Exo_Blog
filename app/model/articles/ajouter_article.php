@@ -11,7 +11,7 @@
 
 			$query = $pdo->prepare($req);
 
-			$query->bindValue(':post_author', $user, PDO::PARAM_INT);
+			$query->bindValue(':post_author', $user["ID"], PDO::PARAM_INT);
 			$query->bindValue(':post_category', $article["post_category"], PDO::PARAM_INT);
 			$query->bindValue(':post_content', $article["post_content"], PDO::PARAM_STR);
 			$query->bindValue(':post_title', $article["post_title"], PDO::PARAM_STR);

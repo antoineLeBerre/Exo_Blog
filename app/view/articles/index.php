@@ -18,7 +18,7 @@
 		</div>
 		
 	<?php } ?>
-	<?php paginat($nb_pages, $module, $action);?>
+	<?php paginat($nb_articles, NB_ARTICLES_PAGE, $module, $action);?>
 </div>
 
 <?php include("app/view/layout/footer.php"); ?>
