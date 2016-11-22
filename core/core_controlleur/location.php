@@ -1,6 +1,6 @@
 <?php 
 
-function location($module, $action; $get='')
+function location($module, $action, $get='')
 {
 	$url = "location:?module=".$module."&action=".$action;
 	if ($get != '') {

@@ -14,13 +14,20 @@
 <div class="container-fluid">
 	<h3>Commentaire</h3>
 	<div class="container">
-		<ul>
-		<?php 
-		foreach ($commentaires as $commentaire) 
+		
+		<?php
+		if (!isset($_SESSION["user"])) { ?>
+			<p>Veuillez vous connecter</p>
+		<?php } 
+		else{ ?>
+			<ul>
+			<?php foreach ($commentaires as $commentaire) 
 		{ ?>
 			<li>Publié le <?php echo $commentaire["comment_date"]; ?> par <?php echo $commentaire["display_name"]; ?> </br>
 			<?php echo $commentaire["comment_content"]; ?> </li>
-		<?php } ?>
+		<?php } 
+		} ?>
+		
 		</ul>
 	</div>
 	<form action="?module=commentaires&action=ajouter_commentaire" method="POST">

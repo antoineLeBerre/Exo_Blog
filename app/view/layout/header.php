@@ -15,6 +15,7 @@
 		<li><a href="?module=articles&action=index">Accueil</a></li>
 		<li><a href="?module=user&action=users">Liste des utilisataeur</a></li>
 		<li><a href="?module=articles&action=new">Creer un article</a></li>
+		<li><a href="?module=commentaires&action=admin">Liste commentaires</a></li>
 		<?php if (!isset($_SESSION['user']))
 		{ ?>
 			<li><a href="?module=user&action=login">Login</a></li>

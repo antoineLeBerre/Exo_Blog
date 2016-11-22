@@ -2,6 +2,7 @@
 
 <div class='container-fluid'>
 	<h3>Derniers articles du blog</h3>
+	
 	<?php 
 	foreach($articles as $article)
 	{ ?>

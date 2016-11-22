@@ -2,8 +2,7 @@
 
 protection("user", 1, "user", "login");
 
-include ('app/model/users/list_users.php');
-$users = list_users();
+$users = lire_table("blog_users", array("ORDER BY"=>"user_login", "ORDER" => "DESC"));
 
 define('PAGE_TITLE', "Detail des utilisateurs");
 include ('app/view/users/users.php');

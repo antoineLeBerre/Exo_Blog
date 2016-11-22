@@ -4,9 +4,8 @@ protection("user", 0, "user", "login");
 
 if(!isset($_POST['post_title']))
 {
-	include_once ("app/model/categorie/lire_categories.php");
-	$categories = lire_categories();
-	
+	$categories = lire_table("blog_categories");
+
 	include_once ("app/view/articles/new.php");
 }
 else

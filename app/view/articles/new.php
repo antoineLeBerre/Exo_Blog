@@ -7,13 +7,9 @@
         <tr>
           <td><label for="post_category">Catégorie</label></td>
           <td>
-            <select name="post_category">
-              <?php
-              foreach ($categories as $categorie) { ?>
-                <option value="<?= $categorie['cat_id'] ?>"><?= $categorie['cat_descr']?></option>
-              <?php } ?>
-            </select>
+            <?php select_list("post_category", $categories, "cat_id", "cat_descr"); ?>
           </td>
+          
         </tr>
 
         <tr>
