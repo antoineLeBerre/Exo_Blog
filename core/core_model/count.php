@@ -1,6 +1,6 @@
 <?php 
 
-function count_table($table)
+function count_table($table, $tab_option=array())
 {
 	global $pdo;
 	try {
