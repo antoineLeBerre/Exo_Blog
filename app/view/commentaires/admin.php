@@ -4,7 +4,7 @@
 	<h3>Commentaires</h3>
 	<?php 
 	if (isset($_GET['user'])) {
-		select_list("post_users", $users, "ID", "user_login","list_select", array("selcted"=>$_GET['user']));
+		select_list("post_users", $users, "ID", "user_login","list_select", array("selected"=>$_GET['user']));
 	}
 	else {
 		select_list("post_users", $users, "ID", "user_login","list_select"); 
@@ -18,7 +18,13 @@
 		<a href="?module=commentaires&action=supprimer_commentaire&id=<?php echo $commentaire['comment_ID']; ?>&page=<?= $page ?>" >Supprimer</a> </li>
 	<?php } ?>
 	</ul>
-	<?php paginat($nb_commentaires, NB_COMMENT_PAGE, 'commentaires', "admin");?>
+	<?php 
+	if(isset($_GET['user'])) {
+			paginat($nb_commentaires, NB_COMMENT_PAGE, 'commentaires', 'admin', '&user=' . $_GET['user']);
+		}
+		else {
+			paginat($nb_commentaires, NB_COMMENT_PAGE, 'commentaires', 'admin');
+		}	
+	?>
 </div>
 
-<script type="text/javascript" src="webroot/js/commentaire_admin.js"></script>

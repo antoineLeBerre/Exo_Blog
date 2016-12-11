@@ -11,14 +11,14 @@ else
 }
 
 $offset = ($page - 1) * NB_COMMENT_PAGE;
-$nb_commentaires = count_table("blog_comments");
+
 $users = lire_table('blog_users');
 $options = array("ORDER BY"=>"comment_date", "ORDER"=>"DESC", "OFFSET"=>$offset, "LIMIT"=>NB_COMMENT_PAGE, "WHERECOL", "VALUE");
 if (isset($_GET["user"])) {
-	$options['WHERECOL'] = "comment_author";
-	$options['VALUE'] = $_GET['user'];
+	$option['WHERECOL'] = "comment_author";
+	$option['VALUE'] = $_GET['user'];
 }
-
+$nb_commentaires = count_table("blog_comments", $option);
 $commentaires = lire_table("blog_comments", $options);
 
 

@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="webroot/style/style.css">
 	<link href="librairies/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<meta charset="<?php echo APP_CHARSET; ?>">
+	<script type="text/javascript" src="webroot/js/commentaire_admin.js"></script>
 </head>
 <body>
 <div class="container-fluid header">
