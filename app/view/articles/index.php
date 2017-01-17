@@ -1,5 +1,5 @@
 <?php include("app/view/layout/header.php"); ?>
-
+<?php if (!defined("BASE_URL")) die("ressource interdite"); ?>
 <div class='container-fluid'>
 	<h3>Derniers articles du blog</h3>
 	

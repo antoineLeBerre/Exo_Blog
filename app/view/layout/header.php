@@ -1,3 +1,4 @@
+<?php if (!defined("BASE_URL")) die("ressource interdite"); ?>
 <!DOCTYPE html>
 <html lang="<?php echo APP_LANG; ?>">
 <head>
@@ -17,12 +18,18 @@
 		<li><a href="?module=user&action=users">Liste des utilisataeur</a></li>
 		<li><a href="?module=articles&action=new">Creer un article</a></li>
 		<li><a href="?module=commentaires&action=admin">Liste commentaires</a></li>
+		
 		<?php if (!isset($_SESSION['user']))
 		{ ?>
+			
 			<li><a href="?module=user&action=login">Login</a></li>
 		<?php }
 		else
 		{ ?>
+			<?php if ($_SESSION["level"] == ADMIN) { ?>
+				<li><a href="?module=user&action=create">Créer utilisateur</a></li>
+			<?php } ?>
+			<li><a href="?module=user&action=modif">Changer info</a></li>
 			<li>Bonjour <?= $_SESSION['user']['user_login'] ?></li>
 			<li><a href="?module=user&action=logout">Logout</a></li>
 		<?php } ?>

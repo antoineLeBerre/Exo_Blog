@@ -1,5 +1,5 @@
 <?php
-
+if (!defined("BASE_URL")) die("ressource interdite");
 	function lire_article($id)
 	{
 		global $pdo;

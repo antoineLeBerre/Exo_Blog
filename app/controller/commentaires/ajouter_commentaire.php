@@ -1,5 +1,5 @@
 <?php 
-
+if (!defined("BASE_URL")) die("ressource interdite");
 if (isset($_POST["id"])) 
 {
 	include_once ("app/model/commentaire/ajouter_commentaire.php");

@@ -1,5 +1,5 @@
 <?php
-
+if (!defined("BASE_URL")) die("ressource interdite");
 include_once ("app/model/pdo.inc.php");
 include ("app/model/articles/lire_articles.php");
 //include ("app/model/articles/lire_nb_articles.php");

@@ -1,4 +1,5 @@
 <?php 
+if (!defined("BASE_URL")) die("ressource interdite");
 
 protection("user", 1, "articles", 'index');
 if(!isset($_GET['page']))

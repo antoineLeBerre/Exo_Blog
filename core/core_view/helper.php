@@ -1,5 +1,5 @@
 <?php 
-
+if (!defined("BASE_URL")) die("ressource interdite");
 function select_list($select_name, $tab_table, $id_col, $descr, $id,  $tab_option = array(), $class = "")
 	{
 		echo "<select name=".$select_name." id='".$id."'>";

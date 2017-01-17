@@ -1,5 +1,5 @@
 <?php include("app/view/layout/header.php"); ?>
-
+<?php if (!defined("BASE_URL")) die("ressource interdite"); ?>
 <div class="container-fluid">
 	<h3>Liste des utilisateurs du site</h3>
 	<p>Voici la liste des utilisateur inscrit sur le site</p>

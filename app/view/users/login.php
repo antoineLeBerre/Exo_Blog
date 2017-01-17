@@ -1,5 +1,5 @@
 <?php include("app/view/layout/header.php"); ?>
-
+<?php if (!defined("BASE_URL")) die("ressource interdite"); ?>
 <div class="container-fluid">
   <form id="form_login" method="post" action="?module=user&action=login">
     <table>

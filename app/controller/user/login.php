@@ -1,5 +1,5 @@
 <?php 
-
+if (!defined("BASE_URL")) die("ressource interdite");
 /*if (isset($_SESSION['user'])) {
 	if ($_SESSION["level"] == 0)
 	{
@@ -21,6 +21,7 @@ if (!isset($_POST["post_login"]))
 else
 {
 	include_once ("app/model/users/login.php");
+	$_POST["post_password"] = md5($_POST["post_password"].SALAGE);
 	$user = verif_login($_POST);
 	if (!$user) {
 		header ("location:?module=user&action=login&notification=nok");
@@ -31,12 +32,12 @@ else
 		if ($user["ID"] == 1) 
 		{
 			$_SESSION["level"] = 1;
-			header ("location:?module=articles&action=admin&notification=ok");
+			location("articles", "index");
 		}
 		else
 		{
 			$_SESSION["level"] = 0;
-			header ("location:?module=articles&action=index&notification=ok");
+			location("articles", "index");
 		}
 		
 	}

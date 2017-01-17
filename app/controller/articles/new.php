@@ -1,6 +1,6 @@
 <?php 
 
-protection("user", 0, "user", "login");
+protection("user", ADMIN, "user", "login");
 
 if(!isset($_POST['post_title']))
 {

@@ -1,5 +1,5 @@
 <?php
-
+if (!defined("BASE_URL")) die("ressource interdite");
 protection("user", 1, "user", "login");
 
 $users = lire_table("blog_users", array("ORDER BY"=>"user_login", "ORDER" => "DESC"));

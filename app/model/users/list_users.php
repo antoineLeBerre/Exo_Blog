@@ -1,5 +1,5 @@
 <?php 
-
+if (!defined("BASE_URL")) die("ressource interdite");
 function list_users()
 {
 	global $pdo;

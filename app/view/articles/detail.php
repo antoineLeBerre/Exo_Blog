@@ -1,4 +1,5 @@
 <?php include("app/view/layout/header.php"); ?>
+<?php if (!defined("BASE_URL")) die("ressource interdite"); ?>
 
 <div class="container-fluid">
 	<h3><?php echo htmlspecialchars($articles[0]["post_title"]) ?></h3>

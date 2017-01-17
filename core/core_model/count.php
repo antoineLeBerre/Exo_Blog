@@ -1,5 +1,5 @@
 <?php 
-
+if (!defined("BASE_URL")) die("ressource interdite");
 function count_table($table, $tab_option=array())
 {
 	global $pdo;
