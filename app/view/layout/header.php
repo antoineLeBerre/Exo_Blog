@@ -34,7 +34,16 @@
         };
 
         function monAffichage(data, element){
-            element.innerHTML = data;
+            console.log(data);
+            if (data == "0") {
+                alert("Mauvaise combinaison Login/Mot de passe");
+            }
+            else if (data == "1"){
+                element.innerHTML = "Connecté";
+            }
+            else if (data == "2"){
+                element.innerHTML = "Connecté";
+            }
         }
 
         function monAjax(element){
@@ -43,7 +52,6 @@
             var password = document.getElementById("password").value;
             var data = "data="+login+" "+password;
 
-            monAffichage(data, element);
             req.onreadystatechange = function(){
 
                 if(req.readyState == 4){

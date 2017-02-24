@@ -4,6 +4,8 @@ function verif_login($login)
 {
 	global $pdo;
 
+	var_dump($pdo);
+	die();
 	try 
 	{
 		$query = $pdo->prepare("SELECT * FROM blog_users 
