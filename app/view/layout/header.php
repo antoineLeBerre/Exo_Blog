@@ -39,13 +39,16 @@
 
         function monAjax(element){
             var req = creerInstance();
-            var data = "test";
+            var login = document.getElementById("login").value;
+            var password = document.getElementById("password").value;
+            var data = "data="+login+" "+password;
 
+            monAffichage(data, element);
             req.onreadystatechange = function(){
 
                 if(req.readyState == 4){
                     if(req.status == 200){
-                        console.log("Test");
+                        monAffichage(req.responseText, element);
                     }
                 }
 
@@ -54,7 +57,7 @@
                 }
             };
 
-            req.open("POST", "conn", true);
+            req.open("POST", "app/controller/user/connexionAjax.php", true);
             req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             req.send(data);
         }
@@ -78,9 +81,9 @@
 			<li><a href="?module=user&action=login">Login</a></li>
             <li>
                 <form action="" method="post" id="test">
-                    <label for="login">Login : </label><input type="text" name="login" id="">
-                    <label for="mdp">Password : </label><input type="text" name="mdp" id="">
-                    <input type="button" name="ok" value="OK" >
+                    <label for="login">Login : </label><input type="text" name="login" id="login">
+                    <label for="password">Password : </label><input type="text" name="mdp" id="password">
+                    <input type="button" name="ok" value="OK" onclick="monAjax(document.getElementById('test'))" >
                 </form>
             </li>
 		<?php }
